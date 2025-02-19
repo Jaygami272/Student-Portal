@@ -177,4 +177,7 @@ class FacultyController extends Controller
         return redirect(route('facultys.index'));
     }
 
+    public function notify(){
+        return view('Faculties.notification');
+    }
 }

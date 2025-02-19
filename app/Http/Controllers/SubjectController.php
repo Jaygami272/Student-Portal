@@ -130,4 +130,6 @@ class SubjectController extends Controller
 
         return redirect(route('subjects.index'));
     }
+
+   
 }

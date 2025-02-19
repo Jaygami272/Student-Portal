@@ -9,6 +9,7 @@
         <div class="col-sm-6">
             <a href="{{route('facultys.create')}}"><button type="button" class="btn btn-gray float-right">Add Faculty</button></a>
             <a href="{{route('facultys.edit',$id)}}"><button type="button" style="margin-right:5px"  class="btn btn-gray float-right">Manage Faculty</button></a>
+            <a href="{{route('facultys.notification')}}"><button type="button" style="margin-right:5px" class="btn btn-gray float-right">Notification</button></a>
         </div>
     </div>
 </div>
@@ -26,7 +27,7 @@
                     <div class="d-flex justify-content-between">
                         <div class="d-flex flex-row align-items-center">
                             <div class="icon">
-                                <img src="http://igenerate.odhavtech.com/profile?text={{ $faculty->name }}" alt="Profile" class="rounded-circle unit-profile">
+                                <img src="https://ui-avatars.com/api/?background=random&name={{ $faculty->name }}" alt="Profile" id="avatar" class="rounded-circle unit-profile">
                             </div>
                             <div class="ms-2 c-details">
                                 <h6 class="mb-0">{{$faculty->name}}</h6>

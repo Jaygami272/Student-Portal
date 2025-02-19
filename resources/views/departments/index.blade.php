@@ -25,7 +25,7 @@
                     <div class="d-flex justify-content-between">
                         <div class="d-flex flex-row align-items-center">
                             <div class="icon">
-                                <img src="http://igenerate.odhavtech.com/profile?text={{ $departments->department_name }}" alt="Profile" class="rounded-circle unit-profile">
+                                <img src="https://ui-avatars.com/api/?background=random&name={{ $departments->department_name }}" alt="Profile" id="avatar" class="rounded-circle unit-profile">
                             </div>
                             <div class="ms-2 c-details">
                                 <h6 class="mb-0">{{$departments->department_name}}</h6>

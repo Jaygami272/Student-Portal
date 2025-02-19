@@ -84,7 +84,7 @@
             <ul class="d-flex align-items-center">
                 <li class="nav-item dropdown pe-3">
                     <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-                        <img src="http://igenerate.odhavtech.com/profile?text={{ Auth::user()->name }}" alt="Profile" class="rounded-circle">
+                        <img id="avatar" alt="Avatar">
                         <span class="d-none d-md-block dropdown-toggle ps-2">{{ Auth::user()->name }}</span>
                     </a>
 
@@ -189,6 +189,21 @@
         b.innerText='Loading...';
         return true;
     }
+</script>
+
+<script>
+    function getRandomColor() {
+        return Math.floor(Math.random()*16777215).toString(16); // Generates a random HEX color
+    }
+
+    function generateAvatar() {
+       let n="{{ Auth::user()->name }}";
+        let randomColor = getRandomColor();
+        let avatarUrl = `https://ui-avatars.com/api/?name=${n}&background=${randomColor}&color=ffffff&rounded=true`;
+        document.getElementById("avatar").src = avatarUrl;
+    }
+
+    generateAvatar(); // Call function on page load
 </script>
 </body>
 

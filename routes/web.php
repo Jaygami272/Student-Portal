@@ -36,6 +36,10 @@ Route::middleware('auth')->group(function () {
     Route :: get ('timetables / ecreate', [App\Http\Controllers\TimetableController::class,'ecreate']) -> name ('timetables.ecreate');
     Route :: post ('timetables / estore', [App\Http\Controllers\TimetableController::class,'estore']) -> name ('timetables.estore');
     Route :: delete ('timetables / edestroy /{id}', [App\Http\Controllers\TimetableController::class,'edestroy']) -> name ('timetables.edestroy');
+
+    Route :: get ('facultys / notification', [App\Http\Controllers\FacultyController::class,'notify']) -> name ('facultys.notification');
+
+
     Route::post('role_permissions/{id}', [App\Http\Controllers\RoleController::class,'update_permission'])->name('role_permissions');
 });
 Auth::routes();

@@ -34,9 +34,9 @@
             <a class="nav-link {{ Request::is('facultys*') ? '' : 'collapsed' }}" data-bs-target="#facultys-nav" data-bs-toggle="collapse" href="#">
                 <i class="bi bi-menu-button-wide"></i><span>Facultys</span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
-            <ul id="facultys-nav" class="nav-content collapse {{ Request::is('Facultys*') ? 'show' : '' }}" data-bs-parent="#sidebar-nav">
+            <ul id="facultys-nav" class="nav-content collapse {{ Request::is('facultys*') ? 'show' : '' }}" data-bs-parent="#sidebar-nav">
                 <li>
-                    <a href="{{ route('facultys.index') }}" class="{{ Request::is('Facultys*') ? 'active' : '' }}">
+                    <a href="{{ route('facultys.index') }}" class="{{ Request::is('facultys*') ? 'active' : '' }}">
                         <i class="bi bi-circle"></i><span>Faculty</span>
                     </a>
                 </li>
